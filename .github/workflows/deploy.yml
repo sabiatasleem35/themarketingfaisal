@@ -15,6 +15,6 @@ jobs:
 
       - name: Copy Files to Server
         run: |
-          rsync -avz --delete-after $GITHUB_WORKSPACE/ azureuser@20.193.153.165:/var/www/html/
+         rsync -avz --delete-after -vvv $GITHUB_WORKSPACE/ azureuser@20.193.153.165:/var/www/html/
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
