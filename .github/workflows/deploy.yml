@@ -16,7 +16,7 @@ jobs:
       - name: Copy Files to Server
         uses: appleboy/scp-action@master
         with:
-          host: SERVER_IP
+          host: 20.193.153.165
           username: SSH_USERNAME
           key: SSH_PRIVATE_KEY
           source: "./*"
