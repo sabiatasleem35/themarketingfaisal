@@ -19,5 +19,6 @@ jobs:
           host: 20.193.153.165
           username: ${{secrets.SSH_USERNAME}}
           key: ${{secrets.SSH_PRIVATE_KEY}}
-          source: "./*"
-          target: "/var/www/html/"
+          script: |
+            cd /var/www/html
+            git pull
