@@ -17,8 +17,8 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           host: 20.193.153.165
-          username: SSH_USERNAME
-          key: SSH_PRIVATE_KEY
+          username: ${{secrets.SSH_USERNAME}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           source: "./*"
           target: "/var/www/html"
 
