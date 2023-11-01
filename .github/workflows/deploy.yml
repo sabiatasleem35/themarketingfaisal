@@ -21,5 +21,6 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             cd /var/www/html
-            git add .
+            git stash
             git pull https://github.com/sabiatasleem35/themarketingfaisal.git
+            git stash apply
