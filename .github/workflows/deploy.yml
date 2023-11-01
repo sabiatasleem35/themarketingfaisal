@@ -19,8 +19,5 @@ jobs:
           host: 20.193.153.165
           username: ${{secrets.SSH_USERNAME}}
           key: ${{secrets.SSH_PRIVATE_KEY}}
-          script: |
-            cd /var/www/html
-            git stash
-            git pull https://github.com/sabiatasleem35/themarketingfaisal.git
-            git stash apply
+          source: "./*"
+          target: "/var/www/html/"
